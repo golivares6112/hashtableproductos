@@ -24,7 +24,7 @@ public class AppMain {
 	public static void main(String[] args)
 	{
 		lector = new Scanner(System.in);
-		while(opcion!='5')
+		while(opcion!='6')
 		{
 			menu();
 			opcion = lector.next().charAt(0);
@@ -93,6 +93,11 @@ public class AppMain {
 					HashTableProductos.listarProductosPorCategoria(categoria);
 					break;
 				case '5':
+					out.println("Lista de Categorias Ingresadas");
+					out.println("------------------------------");
+					HashTableProductos.mostrarCategoriasDisponibles();
+					break;
+				case '6':
 					out.println("Saliendo del Sistema");
 					break;
 				default:
@@ -114,7 +119,8 @@ public class AppMain {
 	     out.println("***  2.- Modificar Producto Categoria    ***");
 	     out.println("***  3.- Eliminar Producto Categoria     ***");
 	     out.println("***  4.- Listar por categoria            ***");
-	     out.println("***  5.- Salir                           ***");
+	     out.println("***  5.- Listar Todo                     ***");
+	     out.println("***  6.- Salir                           ***");
 	     out.println("***                                      ***");
 	     out.println("********************************************");
 	     out.println("********************************************");

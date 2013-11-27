@@ -1,5 +1,6 @@
 package cl.business.objetos;
 
+import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -124,6 +125,17 @@ public class HashTableProductos {
 		}else{
 			System.out.println("No se pudo eliminar el producto");
 		}
+	}
+	
+	public static void mostrarCategoriasDisponibles()
+	{
+		Enumeration<String> categorias = listaProductos.keys();
+		
+		while (categorias.hasMoreElements()) 
+		{
+			System.out.println("[ " + categorias.nextElement() + " ]");
+		}
+		
 	}
      
 }
